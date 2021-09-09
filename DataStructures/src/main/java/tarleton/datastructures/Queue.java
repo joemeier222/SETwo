@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tarleton.datastructures;
 
 /**
@@ -21,6 +16,9 @@ public class Queue {
     }
     
     public void append(int item){
+        if (isFull()){
+            throw new QueueException("Full Queue.");
+        }
         if (isEmpty()){
             this.head = 0;
             this.tail = 0;
@@ -33,6 +31,9 @@ public class Queue {
     }
     
     public int get(){
+        if (isEmpty()){
+            throw new QueueException("Empty Queue.");
+        }
         if (this.head == this.tail){
             int item = this.curQueue[this.head];
             this.head = -1;
