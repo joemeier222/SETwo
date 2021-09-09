@@ -46,6 +46,10 @@ public class Queue {
         }
     }
     
+    public int peek(){
+        return this.curQueue[this.head];
+    }
+    
     public boolean isFull(){
         return ((this.tail + 1) % this.size == this.head);
     }
