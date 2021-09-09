@@ -22,11 +22,7 @@ public class Main {
             System.out.println("Enter value: ");
             String input = sc.nextLine();
             int n = Integer.valueOf(input);
-            if(n == 0){break;}
-            if(q1.isFull()){
-                System.out.println("Print Value:");
-                System.out.println(q1.get());
-                q1.append(n);}            
+            if(n == 0){break;}           
             else{q1.append(n);}
         }
         System.out.println("Print Remaining Values:");
